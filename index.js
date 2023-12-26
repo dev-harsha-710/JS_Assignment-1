@@ -1,3 +1,4 @@
+// Constants at the top of the codebase
 const SEAT_NUMBER = document.getElementById("roll");
 const NAME = document.getElementById("name");
 const JAVA = document.getElementById("java");
@@ -8,6 +9,7 @@ const RESULT = document.getElementById("result");
 const TABLE = document.getElementById("studResult");
 const INPUT_DIV = document.getElementById("inputDiv");
 
+// Creating events
 document.getElementById("submit").addEventListener("click", showResult);
 document.getElementById("back").addEventListener("click", () => {
   INPUT_DIV.style.display = "inline";
@@ -55,7 +57,8 @@ function reset() {
   RESULT.innerHTML = "";
 }
 
-let resultList = [
+// The result data
+const resultList = [
   {
     roll: 100,
     name: "Harsha Gawade",
