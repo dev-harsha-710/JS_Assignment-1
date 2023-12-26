@@ -5,45 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Result</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-      />
-      <script src="./index.js" />
-      </head>
-      <body class="container">
-        <div class="row d-flex justify-content-center">
-          <div id="element" class="mt-5 card col-12" style="width: 40rem">
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <div class="row d-flex justify-content-center" style="display: inline">
+      <div id="inputDiv" class="mt-5 card col-12" style="width: 40rem">
             <h1 class="mb-3 card-header">Welcome, let's see your result</h1>
             <div class="card-body">
           <label for="roll">Enter your roll number: </label
-          ><input type="number" id="getRoll" class="mx-5" /><br />
+          ><input type="number" id="getRoll" class="mx-5" placeholder="Roll no 100-103" /><br />
           <button id="submit" class="btn btn-success btn mt-4">Submit</button>
         </div>
       </div>
-      <div class="col-10" id="studResult" style="display: none">
+      <div class="col-6" id="studResult" style="display: none">
         <table class="table table-striped mt-5" style="text-align: center">
           <tr>
-            <th>Seat No</th>
-            <th>Name</th>
-            <th>Software Engg</th>
-            <th>Java</th>
-            <th>Embedded System</th>
-            <th>Computer Graphics</th>
-            <th>Result</th>
-          </tr>
-          <tr>
-            <td id="roll"></td>
-            <td id="name"></td>
-            <td id="softwareEngg"></td>
-            <td id="java"></td>
-            <td id="embeddedSys"></td>
-            <td id="computerGraphics"></td>
-            <td id="result"></td>
-          </tr>
+            <tr class="table-dark"><th colspan="2">Result</th></tr>
+            <th>Seat No</th> <td id="roll"></td></tr>
+            <tr><th>Name</th> <td id="name"></td></tr>
+            <tr><th>Software Engg</th> <td id="softwareEngg"></td></tr>
+            <tr><th>Java</th> <td id="java"></td></tr>
+            <tr><th>Embedded System</th> <td id="embeddedSys"></td></tr>
+            <tr><th>Computer Graphics</th> <td id="computerGraphics"></td></tr>
+            <tr><th>Result</th><td id="result"></td></tr>
         </table>
+        <button type="button" id="back" class="btn btn-primary">Back</button>
       </div>
     </div>
+    <script type="text/javascript" src="./index.js" ></script>
   </body>
 </html>

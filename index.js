@@ -1,5 +1,3 @@
-document.getElementById("submit").addEventListener("click", showResult);
-
 const SEAT_NUMBER = document.getElementById("roll");
 const NAME = document.getElementById("name");
 const JAVA = document.getElementById("java");
@@ -8,8 +6,16 @@ const EMBEDDED_SYSTEM = document.getElementById("embeddedSys");
 const COMPUTER_GRAPHICS = document.getElementById("computerGraphics");
 const RESULT = document.getElementById("result");
 const TABLE = document.getElementById("studResult");
+const INPUT_DIV = document.getElementById("inputDiv");
+
+document.getElementById("submit").addEventListener("click", showResult);
+document.getElementById("back").addEventListener("click", () => {
+  INPUT_DIV.style.display = "inline";
+  TABLE.style.display = "none";
+});
 
 function showResult() {
+  debugger;
   let roll = Number(document.getElementById("getRoll").value);
   reset();
   for (let stud of resultList) {
@@ -24,13 +30,16 @@ function showResult() {
       if (stud.result === "Passed") RESULT.style.backgroundColor = `green`;
       else RESULT.style.backgroundColor = `red`;
       RESULT.style.color = `white`;
+      break;
     }
   }
 
   if (SEAT_NUMBER.innerHTML == "" || SEAT_NUMBER.innerHTML == "0") {
     TABLE.style.display = "none";
+    INPUT_DIV.style.display = "inline";
     alert("Roll numbers can be between 100 and 103");
   } else {
+    INPUT_DIV.style.display = "none";
     TABLE.style.display = "inline";
   }
 }
